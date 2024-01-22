@@ -50,10 +50,10 @@ function readData() {
         <td>${item.Id}</td>
         <td>${item.Name}</td>
         <td>
-        <button type="button" class="btn btn-warning" onclick="editData('${item.Id}')">
+        <button type="button" class="btn btn-warning " id="editData" onclick="editData('${item.Id}')">
             <i class="fa-solid fa-pen-to-square"></i>
         </button>
-        <button type="button" class="btn btn-danger" style="margin-left:2%" onclick="deleteData('${item.Id}')">
+        <button type="button" class="btn btn-danger" id="deleteData" style="margin-left:2%" onclick="deleteData('${item.Id}')">
             <i class="fa-solid fa-trash"></i>
         </button>
     </td>
@@ -110,3 +110,4 @@ function deleteData(id) {
 }
 
 readData();
+

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/*----------------------------- bubble -----------------------------*/
+.bubble_canvas{
+	min-width:100vw;
+	min-height:100vh;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+/*----------------------------- /bubble -----------------------------*/

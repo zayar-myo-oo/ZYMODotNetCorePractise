@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo jQuery Eyes Follow Mouse Plugin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444444;
+        }
+
+        .eyes {
+            width: 200px;
+            height: 100px;
+            position: relative;
+            border-radius: 100px / 50px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .eye {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #666666;
+            position: absolute;
+            top: 10%;
+            transition: transform .2s ease-in-out;
+        }
+
+        .eye-retina {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="eyes">
+    <div class="eye">
+        <div class="eye-retina"></div>
+    </div>
+    <div class="eye">
+        <div class="eye-retina"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="jquery.eyes-follow-mouse.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.eyes').eyesFollowMouse();
+    });
+</script>
+
+</body>
+</html>

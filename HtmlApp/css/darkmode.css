@@ -1,0 +1,52 @@
+.radio-btn {
+  width: 60px;
+  /* Further reduced width */
+  height: 30px;
+  /* Further reduced height */
+  padding: 3px;
+  /* Reduced padding */
+  background-color: #27173a;
+  border-radius: 15px;
+  /* Adjusted border-radius */
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.radio-btn .radio-inner {
+  position: relative;
+  width: 24px;
+  /* Further reduced inner circle width */
+  height: 24px;
+  /* Further reduced inner circle height */
+  background-color: #ffc207;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  /* Adjusted position for smaller size */
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner.active {
+  transform: translate(calc(60px - 36px));
+  /* Adjust translation for new size */
+}
+
+.radio-btn .radio-inner.active::before {
+  left: -12px;
+  /* Adjusted position for smaller size */
+  transform: scale(1);
+}

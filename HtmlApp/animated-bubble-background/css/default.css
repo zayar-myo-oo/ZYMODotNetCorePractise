@@ -1,0 +1,273 @@
+@charset "utf-8";
+*{
+	word-break:break-all;
+}
+
+*, 
+*:before, 
+*:after{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+html, body{
+	width:100%;
+	background:#FFF;
+}
+
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code, col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,sup, textarea, tfoot tt, ul, var, menu, figure, figcaption{
+	margin:0;
+	padding:0;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+body{
+	font-size:12px;
+	line-height:20px;
+	letter-spacing:1px;
+	text-align:center;
+	font-family: "MS Sans Serif","ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "メイリオ", "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	-webkit-text-size-adjust:100% !important;
+	overscroll-behavior:none;
+}
+
+body *{
+	color:#000;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size:16px;
+	font-weight:normal;
+}
+
+img{
+	-ms-interpolation-mode:bicubic;
+	border:none;
+	vertical-align:bottom;
+}
+
+video{
+	border:none;
+	background:#000;
+	filter:drop-shadow(0px 0px rgba(0,0,0,0));
+	outline:none;
+	object-fit:cover;
+}
+
+iframe{
+	background:none;
+	display:block;
+	position:relative;
+}
+
+main{
+	display:block;
+}
+
+fieldset{
+	border:1px solid #000;
+	display:block;
+}
+
+legend{
+	margin:0 auto;
+	padding:0 5px;
+}
+
+th, 
+strong{
+	font-weight:normal;
+}
+
+td{
+	text-align:left;
+}
+
+address{
+	font-style:normal;
+}
+
+li{
+	list-style:none;
+}
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill{
+	background:#FFF;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus{
+	outline:none;
+}
+
+input, 
+select, 
+textarea{
+	font-size:12px;
+	background:#FFF;
+	border:1px solid #000;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+}
+
+input[type=text], 
+input[type=search], 
+input[type=tel], 
+input[type=url], 
+input[type=email], 
+input[type=password], 
+input[type=datetime], 
+input[type=date], 
+input[type=month], 
+input[type=week], 
+input[type=time], 
+input[type=datetime-local], 
+input[type=number], 
+select{
+	height:32px;
+	line-height:30px;
+	text-indent:5px;
+	padding:0 !important;
+}
+
+input[type=button], 
+input[type=submit]{
+	text-indent:0;
+	line-height:22px;
+	padding:0 10px;
+	-webkit-appearance:none;
+}
+
+input[type=radio], 
+input[type=checkbox]{
+	margin:0;
+	cursor:pointer;
+}
+
+textarea{
+	padding:3px 4px;
+}
+
+label{
+	display:inline-block;
+	cursor:pointer;
+}
+
+label > *{
+	vertical-align:middle;
+}
+
+a:link, 
+a:visited, 
+a:active{
+	text-decoration:none;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+}
+
+@media screen and (min-width:1000px){
+	a:hover{
+		color:#C00;
+		text-decoration:none;
+		outline:none;
+	}
+	
+	a:hover img{
+		opacity:0.7;
+		filter:alpha(opacity=70);
+	}
+	
+	main.pc, 
+	article.pc, 
+	section.pc, 
+	div.pc, 
+	nav.pc, 
+	ul.pc{
+		display:block;
+	}
+	
+	br.pc, 
+	span.pc, 
+	a.pc{
+		display:inline;
+	}
+	
+	li.pc{
+		display:list-item;
+	}
+	
+	.sp{
+		display:none;
+	}
+}
+@media screen and (max-width:1000px){
+	input[type=text], 
+	input[type=search], 
+	input[type=tel], 
+	input[type=url], 
+	input[type=email], 
+	input[type=password], 
+	input[type=datetime], 
+	input[type=date], 
+	input[type=month], 
+	input[type=week], 
+	input[type=time], 
+	input[type=datetime-local], 
+	input[type=number], 
+	select{
+		height:32px;
+		line-height:32px;
+	}
+	
+	input[type=button], 
+	input[type=submit]{
+		line-height:32px;
+	}
+	
+	input[type="button"], 
+	input[type="text"], 
+	input[type="search"], 
+	input[type="submit"], 
+	input[type="image"], 
+	textarea{
+		-webkit-appearance:none;
+		border-radius:0;
+	}
+	
+	.pc{
+		display:none;
+	}
+	
+	main.sp, 
+	article.sp, 
+	section.sp, 
+	div.sp, 
+	nav.sp, 
+	ul.sp{
+		display:block;
+	}
+	
+	br.sp, 
+	span.sp, 
+	a.sp{
+		display:inline;
+	}
+	
+	li.sp{
+		display:list-item;
+	}
+}

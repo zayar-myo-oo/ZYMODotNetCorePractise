@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryプラグイン - 背景にシャボン玉の絵と画像を浮かばせる</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="./css/default.css">
+<!-- plugin -->
+<link rel="stylesheet" href="./default.css">
+<style>
+.bubble{
+	width:100%;
+	height:100vh;
+}
+</style>
+</head>
+<body>
+<div class="bubble"></div>
+	<!-- lib/jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<!-- plugin/global -->
+	<script src="./jquery.bubble.js"></script>
+	
+	<script>
+(function($){
+	$(document).ready(function(){
+		const 
+		eleBody = $('body'), 
+		config = {
+			img:[
+				'./img/pink.png', 
+				'./img/yellow.png', 
+				'./img/green.png' 
+			], 
+			shadowColor:[
+				'#8bcecb', 
+				'#f2a2b9', 
+				'#f4b6d1', 
+				'#ca98c3', 
+				'#fff231', 
+				'#4ab7d0' 
+			], 
+			bubbleFunc:() => {
+				return 'hsla(0, 0%, 100%, 0.5)';
+			} 
+		};
+		eleBody.bubble(config);
+	});
+})(jQuery);
+	</script>
+</body>
+</html>
