@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .fake-radio-button {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .radio-circle {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    .fake-radio-button.selected .radio-circle {
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="colorDisplay" style="width: 100px; height: 100px; border: 1px solid black; margin-top: 20px;"></div>
+  <label for="">Red</label>
+  <div class="fake-radio-button" data-value="red" onclick="toggleRadioButton(this)" tabindex="0">
+    <div class="radio-circle"></div>
+  </div>
+  <label for="">Blue</label>
+  <div class="fake-radio-button" data-value="blue" onclick="toggleRadioButton(this)" tabindex="0">
+    <div class="radio-circle"></div>
+  </div>
+  <label for="">Green</label>
+  <div class="fake-radio-button" data-value="green" onclick="toggleRadioButton(this)" tabindex="0">
+    <div class="radio-circle"></div>
+  </div>
+  <label for="">Yellow</label>
+  <div class="fake-radio-button" data-value="yellow" onclick="toggleRadioButton(this)" tabindex="0">
+    <div class="radio-circle"></div>
+  </div>
+
+
+  <label for="">Red</label>
+  <input type="radio" name="color" value="red" class="color-input">
+  <label for="">Green</label>
+  <input type="radio" name="color" value="green" class="color-input">
+  <label for="">Blue</label>
+  <input type="radio" name="color" value="blue" class="color-input">
+  <label for="">Brown</label>
+  <input type="radio" name="color" value="brown" class="color-input">
+  <label for="">Yellow</label>
+  <input type="radio" name="color" value="yellow" class="color-input">
+  <label for="">Pink</label>
+  <input type="radio" name="color" value="pink" class="color-input">
+
+
+  <script>
+    function toggleRadioButton(element) {
+      // Deselect all radio buttons
+      document.querySelectorAll('.fake-radio-button').forEach(function (radio) {
+        radio.classList.remove('selected');
+      });
+
+      // Select the clicked one
+      element.classList.add('selected');
+
+      // Get the selected value
+      var selectedValue = element.getAttribute('data-value');
+
+      // Apply style changes based on the selected value
+      var colorDisplayDiv = document.getElementById('colorDisplay');
+      if (selectedValue === 'red') {
+        colorDisplayDiv.style.backgroundColor = 'red';
+      } else if (selectedValue === 'blue') {
+        colorDisplayDiv.style.backgroundColor = 'blue';
+      } else if (selectedValue === 'green') {
+        colorDisplayDiv.style.backgroundColor = 'green';
+      } else if (selectedValue === 'yellow') {
+        colorDisplayDiv.style.backgroundColor = 'yellow';
+      }
+    }
+
+    document.querySelectorAll('.color-input').forEach(function (radio) {
+      radio.addEventListener('change', function (event) {
+        var selectedValue = event.target.value;
+
+        // Apply style changes based on the selected value
+        var colorDisplayDiv = document.getElementById('colorDisplay');
+
+        colorDisplayDiv.style.backgroundColor = selectedValue;
+
+      });
+    });
+  </script>
+</body>
+
+</html>
