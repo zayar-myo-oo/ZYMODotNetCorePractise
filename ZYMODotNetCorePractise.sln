@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi", "..\RestApi\RestA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalRestApi", "..\MinimalRestApi\MinimalRestApi\MinimalRestApi.csproj", "{6EE2AD8D-3075-42D5-B056-96256898E3DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMConsoleApp", "ATMConsoleApp\ATMConsoleApp.csproj", "{FA13355B-AAA0-4005-B038-B98EAC666DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMConsoleApp", "ATMConsoleApp\ATMConsoleApp.csproj", "{FA13355B-AAA0-4005-B038-B98EAC666DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZYMODotNetCore.MVCapp", "ZYMODotNetCore.MVCapp\ZYMODotNetCore.MVCapp.csproj", "{BA63DFA1-704A-48F8-B902-C47EC84377B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FA13355B-AAA0-4005-B038-B98EAC666DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA13355B-AAA0-4005-B038-B98EAC666DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA13355B-AAA0-4005-B038-B98EAC666DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA63DFA1-704A-48F8-B902-C47EC84377B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA63DFA1-704A-48F8-B902-C47EC84377B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA63DFA1-704A-48F8-B902-C47EC84377B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA63DFA1-704A-48F8-B902-C47EC84377B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
